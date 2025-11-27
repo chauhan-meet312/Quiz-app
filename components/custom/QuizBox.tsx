@@ -1,54 +1,4 @@
-// 'use client'
 
-// const QuizBox = (
-//     { currentQuestion, currentOptions, currentQuestionNumber, setScore,correctOptionIndex }: {
-//     currentQuestion: string;
-//     currentOptions: string[];
-//     currentQuestionNumber : number;
-//     setScore: React.Dispatch<React.SetStateAction<number>>;
-//     correctOptionIndex: number;
-//     }
-// ) => {
-//     const [selectedOption, setSelectedOption] = useState<number | null>(null);
-//   return (
-//       <div className="flex flex-col gap-2 mt-4 w-full">
-//           {/* Question */}
-//             <Item variant="outline" className="bg-blue-400">
-//                 <ItemContent>
-//                     <ItemDescription className="text-primary font-semibold text-center w-full">
-//                     {currentQuestionNumber}. {currentQuestion}
-//                     </ItemDescription>
-//                 </ItemContent>
-//             </Item>
-          
-//           {/* options */}
-//           {currentOptions.map((option, index) => (
-//               <Item
-//                   key={index}
-//                   variant="outline"
-//                   onClick={
-//                       () => {
-//                           if (index === correctOptionIndex) {
-//                               setScore(prevScore => prevScore + 1);
-//                               setSelectedOption(index);
-//                               console.log(`Clicked ${index}`)
-//                           }
-//                       }
-//                   }
-//                   className={`hover:bg-blue-200 cursor-pointer ${selectedOption === index ? 'bg-blue-600' : ''}`}
-//               >
-//                   <ItemContent>
-//                       <ItemDescription className="text-primary font-semibold text-center">
-//                           {option}
-//                       </ItemDescription>
-//                   </ItemContent>
-//               </Item>
-//           ))}
-//     </div>
-//   )
-// }
-
-// export default QuizBox
 
 'use client'
 
@@ -56,9 +6,6 @@ import { Item, ItemContent, ItemDescription } from "../ui/item"
 import { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 import { Label } from "@/components/ui/label"
-// import { Label } from "@/components/ui/label"
-// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-// import { useState } from "react";
 
 const QuizBox = (
     { currentQuestion, currentOptions, currentQuestionNumber, setScore, correctOptionIndex }: {
